@@ -1,4 +1,7 @@
 <?PHP
+// Change these variables as you seems fit
+$emailAddress = "your@email.com";
+$emailTitle = "Server Reboot Alert";
 
 function getUserIP()
 {
@@ -35,7 +38,7 @@ if(isset($_GET['verified2021'])){
 
 if(isset($_GET['verified2021']) && isset($_GET['ip'])){
     $msg = "Current IP: " . $_GET['ip'];
-    mail('my_email@address.com','Title: ECS-Reboot',$msg);
+    mail($emailAddress,$emailTitle,$msg);
     //echo "DONE";
 }
 
